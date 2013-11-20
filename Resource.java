@@ -20,6 +20,10 @@ public class Resource {
 	{
 		this.loan = loan;
 	}
+	public Loan getLoan()
+	{
+		return this.loan;
+	}
 	public void addReservation(Reservation reservation)
 	{
 		this.reservation = reservation;

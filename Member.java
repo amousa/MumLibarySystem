@@ -65,4 +65,8 @@ public class Member {
 	{
 		return this.ID;
 	}
+	public String getString()
+	{
+		return this.name;
+	}
 }

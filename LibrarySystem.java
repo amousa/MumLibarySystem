@@ -35,6 +35,11 @@ public class LibrarySystem {
 	{
 		members.add(member);
 	}
+
+	public List<Resource> getResources()
+	{
+		return this.resources; 
+	}
 	
 	public void borrowResource(long memberID, long copyID) {
 		

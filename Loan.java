@@ -1,6 +1,6 @@
 package MumLibarySystem;
 
-import java.util.Date;
+import java.util.*;
 
 public class Loan{
 	private Date checkoutDate;
@@ -14,6 +14,18 @@ public class Loan{
 		this.returnDate = returnDate;
 		this.member 	= member;
 		this.resource 	= resource;
+	}
+	public Member getMember()
+	{
+		return this.member;
+	}
+	public Resource getResource()
+	{
+		return this.resource;
+	}
+	public Date getCheckOutDate()
+	{
+		return this.checkoutDate;
 	}
 
 }
