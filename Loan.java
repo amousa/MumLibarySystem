@@ -5,24 +5,15 @@ import java.util.Date;
 public class Loan{
 	private Date checkoutDate;
 	private Date returnDate;
-	private long borrowerID;
-	private long borrowedItemID;
+	private Resource resource;
+	private Member member;
 	
-	public Loan( Date checkoutDate,
-			Date returnDate,
-			long borrowerID,
-			long borrowedItemID) {
+	public Loan( Date checkoutDate, Date returnDate, Member member, Resource resource) 
+	{
 		this.checkoutDate = checkoutDate;
 		this.returnDate = returnDate;
-		this.borrowerID = borrowerID;
-		this.borrowedItemID = borrowedItemID;
-	}
-	
-	public long getBorrowerID() {
-		return borrowerID;
+		this.member 	= member;
+		this.resource 	= resource;
 	}
 
-	public long getResourceCopyID() {
-		return borrowedItemID;
-	}
 }

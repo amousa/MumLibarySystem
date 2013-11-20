@@ -4,16 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LibrarySystem {
-	private LoanHistory loanTracker;
 	private List<Resource> resources;
 	private List<Member> members;
 	
 	public LibrarySystem() {
-		loanTracker = new LoanHistory();
 		members = new ArrayList<Member>();
 		resources = new ArrayList<Resource>();
 	}
 	
+	public Resource search(String title)
+	{
+		for(Resource res : resources)
+		{
+			if(res.getTitle().equals(title))
+			{
+				return res;
+			}
+		}
+		return null;
+	}
 	public void addBook(String title,
 			int maxLoanDuration, 
 			int ISBN, 
@@ -22,10 +31,8 @@ public class LibrarySystem {
 		resources.add(book);
 	}
 	
-	public void addMember(String name,
-			String address,
-			String phoneNumber) {
-		Member member = new Member(name, address, phoneNumber, this);
+	public void addMember(Member member)
+	{
 		members.add(member);
 	}
 	
@@ -33,7 +40,4 @@ public class LibrarySystem {
 		
 	}
 	
-	public void addLoan(Loan loan){
-		loanTracker.addLoan(loan);
-	}
 }
